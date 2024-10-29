@@ -1,9 +1,11 @@
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-    <div>
-        {{ $logo }}
-    </div>
+<x-guest-layout>
+    <x-authentication-card>
+        <x-slot name="logo">
+            <a href="/">
+                <img src="/logo.svg" alt="Logo" class="w-20 h-20">
+            </a>
+        </x-slot>
 
-    <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-        {{ $slot }}
-    </div>
-</div>
+        <!-- Tu formulario de login aquí -->
+    </x-authentication-card>
+</x-guest-layout>
